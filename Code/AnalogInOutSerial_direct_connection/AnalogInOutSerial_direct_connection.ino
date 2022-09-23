@@ -29,8 +29,8 @@ int outputValue = 0;        // value output to the PWM (analog out)
 
 //Pressure sensor calibration factors  Futek 
  
-const float SensorOffset = -0.1915;  //futek sensor offset
-const float SensorGain = 0.0144;   // futek sensor proportional relation
+const float SensorOffset = -0.0547;  //futek sensor offset
+const float SensorGain = 0.0117;   // futek sensor proportional relation
 
 void setup() {
   // initialize serial communications at 9600 bps:
@@ -46,10 +46,10 @@ void loop() {
   analogWrite(analogOutPin, outputValue);
 
   // print the results to the Serial Monitor:
-  Serial.print("sensor = ");
-  Serial.print(sensorValue);
-  Serial.print("\t output = ");
-  Serial.println(outputValue);
+  //Serial.print("sensor = ");
+  Serial.println(sensorValue);
+  //Serial.print("\t output = ");
+  //Serial.println(outputValue);
 
   // wait 2 milliseconds before the next loop for the analog-to-digital
   // converter to settle after the last reading:
